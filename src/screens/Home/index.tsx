@@ -1,11 +1,30 @@
-import { Text, View } from 'react-native';
+import { Text, View, TextInput } from 'react-native';
 import { styles } from './styles';
 
-export default function Home() {
+export function Home() {
     return (
         <View style={styles.container}>
-            <Text style={styles.eventName}>Entrar</Text>
-            <Text style={styles.eventDate}>Sexta, 4 Novembro de 2022.</Text>
+
+            <Text style={styles.eventName}>
+                Entrar
+            </Text>
+            <View style={styles.containerlogin}>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Login"
+                    placeholderTextColor="#6B6B6B"
+                    keyboardType='email-address'
+                />
+                <Text>
+
+                </Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Senha"
+                    placeholderTextColor="#6B6B6B"
+                    keyboardType='numeric'
+                />
+            </View>
         </View>
     );
 }

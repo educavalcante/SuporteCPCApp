@@ -1,4 +1,13 @@
 [] Splash
 [] ativar o linear gradient
 backgroundColor: 'linear-gradient(180deg, #008898 0%, #81E6D9 151.95%, #38B2AC 151.95%);',
+npm install react-native-linear-gradient
+
 [] Tela de login
+Home
+export e export defautl
+exportacao sem o defalut exportacao nomeada usar entre cheves com o default n precisa das chaves
+o export sem o default tem que apontar entre chaves  *** preferir usar sem o defautl para evityar inconsistencias
+na default vc n escolhe o que quer exportar por isso n precisa das chaves (pode apelidar / da margem a inconsistencias)
+*** preferir usar sem o defautl para evityar inconsistencias
+na App obrigatorio usar a export default
