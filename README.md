@@ -1,1 +1,0 @@
-backgroundColor: 'linear-gradient(180deg, #008898 0%, #81E6D9 151.95%, #38B2AC 151.95%);',
