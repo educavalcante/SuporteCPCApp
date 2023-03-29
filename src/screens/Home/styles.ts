@@ -4,14 +4,14 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#008898',
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: 50,
 
     },
     containerlogin: {
         backgroundColor: '#FFF',
-        justifyContent: "flex-end",
-        borderRadius: 15,
-        padding: 100
+        borderRadius: 10,
+        padding: 10
 
 
     },
@@ -21,14 +21,30 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 48
     },
+    textLinkPass: {
+        color: '#1F1E25',
+        fontSize: 8,
+        marginTop: 1,
+        paddingLeft: 180,
+        marginBottom: 50,
+
+
+    },
     input: {
         height: 56,
         backgroundColor: '#FFF',
         borderRadius: 5,
-        color: '#1F1E25',
         borderColor: "#6B6B6B",
-        padding: 16,
-        fontSize: 16,
-        alignItems: 'stretch',
+        borderWidth: 0.7,
+        // padding: 5,
+        fontSize: 14,
+        color: '#1F1E25',
+        margin: 2,
+        paddingLeft: 5,
+        width: 300
+    },
+    buttonLogin: {
+
+        borderRadius: 5,
     }
 });
