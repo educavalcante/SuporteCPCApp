@@ -4,13 +4,22 @@ backgroundColor: 'linear-gradient(180deg, #008898 0%, #81E6D9 151.95%, #38B2AC 1
 npm install react-native-linear-gradient
 
 [] Tela de login
-Home
+Home:
 export e export defautl
 exportacao sem o defalut exportacao nomeada usar entre cheves com o default n precisa das chaves
 o export sem o default tem que apontar entre chaves  *** preferir usar sem o defautl para evityar inconsistencias
 na default vc n escolhe o que quer exportar por isso n precisa das chaves (pode apelidar / da margem a inconsistencias)
 *** preferir usar sem o defautl para evityar inconsistencias
 na App obrigatorio usar a export default
+[] botao
+<Button:
+title="ACESSAR"
+color="#000000"
+onPress={() => Alert.alert('not press this one')}
+/>
+[] onPress={handle}  
+handle: 
+    as funções que são disparadas a partir de um toque do usuário usar o handle
 
 [] cores
 aliceblue (`#f0f8ff`)

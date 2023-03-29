@@ -2,6 +2,11 @@ import { Text, View, TextInput, Button, Alert, TouchableOpacity } from 'react-na
 import { styles } from './styles';
 
 export function Home() {
+
+    function handleLoginApi() {
+        console.log('voce clicou no botão de acessar')
+    }
+
     return (
         <View style={styles.container}>
 
@@ -32,11 +37,11 @@ export function Home() {
                         Esqueci minha senha
                     </Text>
                 </TouchableOpacity>
-                <Button
-                    title="ACESSAR"
-                    color="#000000"
-                    onPress={() => Alert.alert('not press this one')}
-                />
+                <TouchableOpacity style={styles.buttonLogin} onPress={handleLoginApi}>
+                    <Text style={styles.textButtonLogin}>
+                        ACESSAR
+                    </Text>
+                </TouchableOpacity>
             </View>
         </View>
     );

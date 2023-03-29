@@ -27,8 +27,6 @@ export const styles = StyleSheet.create({
         marginTop: 1,
         paddingLeft: 180,
         marginBottom: 50,
-
-
     },
     input: {
         height: 56,
@@ -44,7 +42,16 @@ export const styles = StyleSheet.create({
         width: 300
     },
     buttonLogin: {
-
+        height: 50,
+        width: 300,
+        backgroundColor: '#000000',
         borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textButtonLogin: {
+        color: '#FFFFFF',
+        fontSize: 14,
+
     }
 });
