@@ -21,7 +21,28 @@ onPress={() => Alert.alert('not press this one')}
 handle: 
     as funções que são disparadas a partir de um toque do usuário usar o handle
 
+[] preenchimento de tela
+direção do elementos *um abaixo do outro
+flex: 1 preenche todo o display
+--
+usar o with:'100%',
+flexDirection: 'row'
+alignItems: 'center'
+>>> Flex de 1 empurra todo o conteudo
+para desgrudar quem ta embaixo usar o margin botom de 10 
+
+[] Componentizacao (para criar interfaces)
+lego - peças que podem ser *reaproveitadas* e peças especificas
+componentizar quando se repetem (botoes, caixas de texto, cabeçalhos) 
+vantaens: 
+    reutilizar, produticidade, isolamento de contexto, reduz complexidade, arquivos menores, padroniza e melhor leitura
+criar componentes:
+
+
 [] cores
+#e23c44 vermelhor de exlcuir
+#31CF67 VERDE DE gravar
+
 aliceblue (`#f0f8ff`)
 antiquewhite (`#faebd7`)
 aqua (`#00ffff`)

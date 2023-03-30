@@ -1,6 +1,8 @@
 import { Text, View, TextInput, Button, Alert, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
+import { CopyrightCPC } from '../../components/CopyrightCPC';
+
 export function Home() {
 
     function handleLoginApi() {
@@ -10,10 +12,11 @@ export function Home() {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.eventName}>
-                Entrar
-            </Text>
+
             <View style={styles.containerlogin}>
+                <Text style={styles.eventName}>
+                    Entrar
+                </Text>
                 <TextInput
                     style={styles.input}
                     placeholder="Cnpj"
@@ -42,7 +45,13 @@ export function Home() {
                         ACESSAR
                     </Text>
                 </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textLinkCadastrar}>
+                        Não possui conta? Cadastrar
+                    </Text>
+                </TouchableOpacity>
             </View>
+            <CopyrightCPC />
         </View>
     );
 }
