@@ -1,57 +1,65 @@
-import { Text, View, TextInput, Button, Alert, TouchableOpacity } from 'react-native';
+import { Text, View, TextInput, Button, Alert, TouchableOpacity, StatusBar } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
 import { styles } from './styles';
-
-import { CopyrightCPC } from '../../components/CopyrightCPC';
+import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
+import { Loading } from '@components/Loading';
 
 export function Home() {
-
+    const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular });
     function handleLoginApi() {
         console.log('voce clicou no botão de acessar')
     }
 
     return (
-        <View style={styles.container}>
+        <NativeBaseProvider>
+            <StatusBar
+                barStyle="light-content"
+                //backgroundColor="transparent"
+                translucent
+            />
+            <View style={styles.container}>
 
+                {fontsLoaded ? <View /> : <Loading />}
+                <View style={styles.containerlogin}>
+                    <Text style={styles.eventName}>
+                        Entrar
+                    </Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Cnpj"
+                        placeholderTextColor="#6B6B6B"
+                        keyboardType='numeric'
+                    />
 
-            <View style={styles.containerlogin}>
-                <Text style={styles.eventName}>
-                    Entrar
-                </Text>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Cnpj"
-                    placeholderTextColor="#6B6B6B"
-                    keyboardType='numeric'
-                />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Login"
+                        placeholderTextColor="#6B6B6B"
+                        keyboardType='email-address'
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Senha"
+                        placeholderTextColor="#6B6B6B"
+                    />
+                    <TouchableOpacity>
+                        <Text style={styles.textLinkPass}>
+                            Esqueci minha senha
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.buttonLogin} onPress={handleLoginApi}>
+                        <Text style={styles.textButtonLogin}>
+                            ACESSAR
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.textLinkCadastrar}>
+                            Não possui conta? Cadastrar
+                        </Text>
+                    </TouchableOpacity>
+                </View>
 
-                <TextInput
-                    style={styles.input}
-                    placeholder="Login"
-                    placeholderTextColor="#6B6B6B"
-                    keyboardType='email-address'
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Senha"
-                    placeholderTextColor="#6B6B6B"
-                />
-                <TouchableOpacity>
-                    <Text style={styles.textLinkPass}>
-                        Esqueci minha senha
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonLogin} onPress={handleLoginApi}>
-                    <Text style={styles.textButtonLogin}>
-                        ACESSAR
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text style={styles.textLinkCadastrar}>
-                        Não possui conta? Cadastrar
-                    </Text>
-                </TouchableOpacity>
             </View>
-            <CopyrightCPC />
-        </View>
+        </NativeBaseProvider>
     );
 }
