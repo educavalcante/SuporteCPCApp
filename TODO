@@ -449,7 +449,6 @@ instar em projeto existente ou em projeto novo
 testar se o native-base esta funcionado importa o NativeBaseProvider (anvoçver tpda a aplicacao)
 ========================================================================================================================
     [] THEME
-
     src/theme/index.ts
     extender o thema padrao criando uma nova tematica com as cores do projeto
     precisa importar o thema craido no App.tsx 
@@ -493,7 +492,11 @@ testar se o native-base esta funcionado importa o NativeBaseProvider (anvoçver 
             }
         }
     )
-
+========================================================================================================================
+    [] importar imagens
+    adicionar a typagem com o @assets/@types/png.d.ts
+     - declare module "*.png";
+     - depois importar a imagem do local e usar o <Image> do native-base
 
 ========================================================================================================================
     [] publicacao na loja 
