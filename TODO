@@ -1,3 +1,209 @@
+[] como executar o expo -- recomendado npx expo start
+ao inicar um projeto usar npm ou npx expo init myapp
+npx executa sem ter a necessidade de ter o expo instalado
+npx expo init my app (esclha o tipo com ts)
+npx creat-expo-app (nao pergt o tipo de projeto)
+npx expo start -- n pegar o expo local
+expo init myapp (usa o excpo da maquina) com o npx expo init myapp nao precisa ter o expo (vantajoso)
+
+npx expo install expo-font (para instalar algum tipode fonte)
+
+
+---- usar local na maquina precisa fazer a instalacao 
+pegar do site metodo mais atual exemplo npm i -g expo-cli (docs.expo.dev)
+
+[] instalar o expo local 
+npm i -g expo-cli
+[] emulador
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+[]  instar o ambiente
+https://react-native.rocketseat.dev/expo-managed/windows :
+    https://react-native.rocketseat.dev/:
+☐ 2 na pasta do projeto executar o expo start 
+expo init nome-app --npm
+** -- npm pra usar por padrao o npm
+criar com blank typescripy
+[] Instalar o native-base   -- https://docs.nativebase.io/install-expo
+1 **em um projeto ja Existente
+  npm install native-base
+  expo install react-native-svg@12.1.1
+  expo install react-native-safe-area-context@3.3.2
+========================================================================================================================
+[] BABEL (ESTATEGIA DE MAPEAMENTO DE PASTAS MAPPING PATH) confifurar o babel e o tsconfig
+npm install --save-dev-plugin-module-resolver
+
+1 COPIAR EM babel.config:
+plugins: [
+  [
+    'module-resolver',
+    {
+      root: ['./src'],
+      alias: {
+        '@dtos': './src/dtos',
+        '@assets': './src/assets',
+        '@components': './src/components',
+        '@screens': './src/screens',
+        '@storage': './src/storage',
+        '@utils': './src/utils',
+        '@services': './src/services',
+        '@hooks': './src/hooks',
+        '@contexts': './src/contexts',
+        '@routes': './src/routes'
+      }
+    },
+  ],
+],
+2 COPIAR EM tsconfig.json:
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@dtos/*": [
+        "src/dtos/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@screens/*": [
+        "./src/screens/*"
+      ],
+      "@storage/*": [
+        "./src/storage/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@contexts/*": [
+        "./src/contexts/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ]
+    }
+  }
+}
+========================================================================================================================
+[] incluir fontes
+npx expo install expo-font @expo-google-fonts/roboto
+
+-- importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
+import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
+testar se a fonte ta carregada no inicio --- 
+export default function App() {
+  const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular }); -- carregar a fonte que vai usar
+  return (
+    <View>
+      {fontsLoaded ? <Text>Hello</Text> : <View />}  -- testa se a fonte esta carregada
+    </View>
+  );
+}
+========================================================================================================================
+[] NativeBaseProvider (encapsular todo o layout)
+
+========================================================================================================================
+[] StatusBar
+import { StatusBar } from 'react-native';
+<StatusBar
+barStyle="light-content"
+backgroundColor="transparent"
+translucent  (mostrar no topo)
+/>
+========================================================================================================================
+[] native-base componente library - docs.nativebase.io
+bibilioteca de compontnes - produtividade
+docs.nativebase.ioimport { Spinner } from 'native-base'
+Loadiing:
+import { Spinner, Center } from 'native-base'   -- center e spinner
+export function Loading() {
+    return (
+        <Center flex={1}>  -- flex 1 tomar toda tela
+            <Spinner />
+        </Center>
+    );
+}
+instar em projeto existente ou em projeto novo
+1 npm install native-base
+2 expo install react-native-svg@12.1.1
+3 expo install react-native-safe-area-context@3.3.2
+
+testar se o native-base esta funcionado importa o NativeBaseProvider (anvoçver tpda a aplicacao)
+========================================================================================================================
+[] THEME customizar tema do native-base -- import { extendTheme }
+src/theme/index.ts
+extender o thema padrao criando uma nova tematica com as cores do projeto
+precisa importar o thema craido no App.tsx 
+...............................................index.ts
+import { extendTheme } from 'native-base'
+export const THEME = extendTheme(
+    {
+        colors: {
+            green: {
+                700: '#00875F',
+                500: '#00B37E',
+            },
+            gray: {
+                700: '#121214',
+                600: '#202024',
+                500: '#29292E',
+                400: '#323238',
+                300: '#7C7C8A',
+                200: '#C4C4CC',
+                100: '#E1E1E6'
+            },
+            white: '#FFFFFF',
+            red: {
+                500: '#F75A68'
+            }
+        },
+        fonts: {
+            heading: 'Roboto_700Bold',
+            body: 'Roboto_400Regular',
+        },
+        fontSizes: {
+            xs: 12,
+            sm: 14,
+            md: 16,
+            lg: 18,
+            xl: 20,
+        },
+        sizes: {
+            14: 56,
+            33: 148
+        }
+    }
+)
+========================================================================================================================
+[] importar imagens  - comonente {Image} from 'native-base'
+import BackgroundImg from 'caminho...' (necessário criar a tipagem do png)
+adicionar a typagem com o @assets/@types/png.d.ts
+ - declare module "*.png";
+ - depois importar a imagem do local e usar o <Image> do native-base
+ - adcionar a tag alt="" //tirar o warning
+            source={BackgroundImg}
+            alt="pessoas treinando"
+            resizeMode="contain"
+            position="absolute"
+ [] *SVG* instalada a dependencia para poder exibir o svg
+  1 expo install react-native-svg@12.1.1
+  2 a biblioteca svg TRANSFORMER   intarlar ******* npm i react-native-svg-transformer --save-dev
+  3 criar e configurar o metro.config.js
+  metro.config.js  criar um arquivco com esse nome e configurações  
+  import LogoSvg from '@assets/logo.svg';
+========================================================================================================================
+[] VStack componente de layout que coloca uma coisa emcima da outra - compmente de layout*
+
 [] Splash
 [] ativar o linear gradient
 backgroundColor: 'linear-gradient(180deg, #008898 0%, #81E6D9 151.95%, #38B2AC 151.95%);',
@@ -298,9 +504,7 @@ export default function App() {
 }
 ========================================================================================================================
 
-
-
-[] publicacao na loja 
+    [] publicacao na loja 
 lojas, requisitos e dicas
 
 templates
@@ -314,189 +518,7 @@ ANDROID:
     Configurando Google Play Store
     Distribuindo app para testers
 
-    [] como executar o expo -- recomendado npx expo start
-    ao inicar um projeto usar npm ou npx expo init myapp
-    npx executa sem ter a necessidade de ter o expo instalado
-    npx expo init my app (esclha o tipo com ts)
-    npx creat-expo-app (nao pergt o tipo de projeto)
-    npx expo start -- n pegar o expo local
-    expo init myapp (usa o excpo da maquina) com o npx expo init myapp nao precisa ter o expo (vantajoso)
-    
-    npx expo install expo-font (para instalar algum tipode fonte)
-    
-    
-    ---- usar local na maquina precisa fazer a instalacao 
-    pegar do site metodo mais atual exemplo npm i -g expo-cli (docs.expo.dev)
-    
-    [] instalar o expo local 
-    npm i -g expo-cli
-    [] emulador
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    
-    []  instar o ambiente
-    https://react-native.rocketseat.dev/expo-managed/windows :
-        https://react-native.rocketseat.dev/:
-    ☐ 2 na pasta do projeto executar o expo start 
-    expo init nome-app --npm
-    ** -- npm pra usar por padrao o npm
-    criar com blank typescripy
-    ========================================================================================================================
-    [] BABEL (ESTATEGIA DE MAPEAMENTO DE PASTAS MAPPING PATH) confifurar o babel e o tsconfig
-    npm install --save-dev-plugin-module-resolver
-    
-    1 COPIAR EM babel.config:
-    plugins: [
-      [
-        'module-resolver',
-        {
-          root: ['./src'],
-          alias: {
-            '@dtos': './src/dtos',
-            '@assets': './src/assets',
-            '@components': './src/components',
-            '@screens': './src/screens',
-            '@storage': './src/storage',
-            '@utils': './src/utils',
-            '@services': './src/services',
-            '@hooks': './src/hooks',
-            '@contexts': './src/contexts',
-            '@routes': './src/routes'
-          }
-        },
-      ],
-    ],
-    2 COPIAR EM tsconfig.json:
-    {
-      "extends": "expo/tsconfig.base",
-      "compilerOptions": {
-        "strict": true,
-        "baseUrl": "./",
-        "paths": {
-          "@dtos/*": [
-            "src/dtos/*"
-          ],
-          "@assets/*": [
-            "./src/assets/*"
-          ],
-          "@components/*": [
-            "./src/components/*"
-          ],
-          "@screens/*": [
-            "./src/screens/*"
-          ],
-          "@storage/*": [
-            "./src/storage/*"
-          ],
-          "@utils/*": [
-            "./src/utils/*"
-          ],
-          "@services/*": [
-            "./src/services/*"
-          ],
-          "@hooks/*": [
-            "./src/hooks/*"
-          ],
-          "@contexts/*": [
-            "./src/contexts/*"
-          ],
-          "@routes/*": [
-            "./src/routes/*"
-          ]
-        }
-      }
-    }
-    ========================================================================================================================
-    [] incluir fontes
-    npx expo install expo-font @expo-google-fonts/roboto
-    
-    -- importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
-    import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
-    testar se a fonte ta carregada no inicio --- 
-    export default function App() {
-      const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular }); -- carregar a fonte que vai usar
-      return (
-        <View>
-          {fontsLoaded ? <Text>Hello</Text> : <View />}  -- testa se a fonte esta carregada
-        </View>
-      );
-    }
-    ========================================================================================================================
-    [] StatusBar
-    import { StatusBar } from 'react-native';
-    <StatusBar
-    barStyle="light-content"
-    backgroundColor="transparent"
-    translucent  (mostrar no topo)
-  />
-  ========================================================================================================================
-    [] native-base componente library - docs.nativebase.io
-bibilioteca de compontnes - produtividade
-docs.nativebase.ioimport { Spinner } from 'native-base'
-Loadiing:
-    import { Spinner, Center } from 'native-base'   -- center e spinner
-    export function Loading() {
-        return (
-            <Center flex={1}>  -- flex 1 tomar toda tela
-                <Spinner />
-            </Center>
-        );
-    }
-instar em projeto existente ou em projeto novo
-1 npm install native-base
-2 expo install react-native-svg@12.1.1
-3 expo install react-native-safe-area-context@3.3.2
-
-testar se o native-base esta funcionado importa o NativeBaseProvider (anvoçver tpda a aplicacao)
-========================================================================================================================
-    [] THEME
-    src/theme/index.ts
-    extender o thema padrao criando uma nova tematica com as cores do projeto
-    precisa importar o thema craido no App.tsx 
-...............................................index.ts
-    import { extendTheme } from 'native-base'
-    export const THEME = extendTheme(
-        {
-            colors: {
-                green: {
-                    700: '#00875F',
-                    500: '#00B37E',
-                },
-                gray: {
-                    700: '#121214',
-                    600: '#202024',
-                    500: '#29292E',
-                    400: '#323238',
-                    300: '#7C7C8A',
-                    200: '#C4C4CC',
-                    100: '#E1E1E6'
-                },
-                white: '#FFFFFF',
-                red: {
-                    500: '#F75A68'
-                }
-            },
-            fonts: {
-                heading: 'Roboto_700Bold',
-                body: 'Roboto_400Regular',
-            },
-            fontSizes: {
-                xs: 12,
-                sm: 14,
-                md: 16,
-                lg: 18,
-                xl: 20,
-            },
-            sizes: {
-                14: 56,
-                33: 148
-            }
-        }
-    )
-========================================================================================================================
-    [] importar imagens
-    adicionar a typagem com o @assets/@types/png.d.ts
-     - declare module "*.png";
-     - depois importar a imagem do local e usar o <Image> do native-base
+   
 
 ========================================================================================================================
     [] publicacao na loja 
