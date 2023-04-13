@@ -16,7 +16,7 @@ export function SignIn() {
 
             <Center>
                 <Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
-                    Ambiente de Suporte
+                    Ambiente de Suporte CPC
                 </Heading>
                 <Input placeholder="E-mail" />
                 <Input placeholder="Senha" />

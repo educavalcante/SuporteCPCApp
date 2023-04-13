@@ -205,6 +205,22 @@ adicionar a typagem com o @assets/@types/png.d.ts
 [] VStack componente de layout que coloca uma coisa emcima da outra - compmente de layout*
 ========================================================================================================================
 [] Heading compnente de texto para destaques de titulos
+[] Input /> 
+inputs devem ser tipados para poder acessar as propriedades
+Input({ ...rest }: IInputProps) // tipagem {: 
+    return (
+        <NativeBaseInput
+            bg="gray.700"
+            h={14}
+            px={4}
+            borderWidth={0}
+            fontSize="md"
+            color="white"
+            fontFamily="body"
+            mb={4}
+            placeholderTextColor="gray.300"
+            {...rest} // sempre por ultimo o rest:
+-- criar o arquivo Input.tsx em componentes, criar o compontente e importar na App.tsx por exemplo
 ========================================================================================================================
 [] Splash
 ========================================================================================================================
