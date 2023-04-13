@@ -1,7 +1,10 @@
-import { Text, View, TextInput, Button, Alert, TouchableOpacity, StatusBar } from 'react-native';
-import { NativeBaseProvider } from 'native-base';
+import { Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
+import { NativeBaseProvider, Center } from 'native-base';
 import { styles } from './styles';
 import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
+
+import LogoSvg2 from '@assets/logomarcacpcbotom.svg';
+import LogoSvg from '@assets/logoteste.svg';
 import { Loading } from '@components/Loading';
 
 export function Home() {
@@ -17,10 +20,15 @@ export function Home() {
                 //backgroundColor="transparent"
                 translucent
             />
+
+
             <View style={styles.container}>
 
                 {fontsLoaded ? <View /> : <Loading />}
                 <View style={styles.containerlogin}>
+                    <Center mt={2}>
+                        <LogoSvg />
+                    </Center>
                     <Text style={styles.eventName}>
                         Entrar
                     </Text>
@@ -58,7 +66,9 @@ export function Home() {
                         </Text>
                     </TouchableOpacity>
                 </View>
-
+                <Center>
+                    <LogoSvg />
+                </Center>
             </View>
         </NativeBaseProvider>
     );

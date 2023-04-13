@@ -203,8 +203,11 @@ adicionar a typagem com o @assets/@types/png.d.ts
   import LogoSvg from '@assets/logo.svg';
 ========================================================================================================================
 [] VStack componente de layout que coloca uma coisa emcima da outra - compmente de layout*
-
+========================================================================================================================
+[] Heading compnente de texto para destaques de titulos
+========================================================================================================================
 [] Splash
+========================================================================================================================
 [] ativar o linear gradient
 backgroundColor: 'linear-gradient(180deg, #008898 0%, #81E6D9 151.95%, #38B2AC 151.95%);',
 npm install react-native-linear-gradient
