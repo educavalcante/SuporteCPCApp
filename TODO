@@ -219,8 +219,58 @@ Input({ ...rest }: IInputProps) // tipagem {:
             fontFamily="body"
             mb={4}
             placeholderTextColor="gray.300"
+            estilizar o focus:   
+              _focus={{bg: "gray.700", borderwidth: 1, borderColor: "grenn.500"}}  // efeito tipo hover:
             {...rest} // sempre por ultimo o rest:
 -- criar o arquivo Input.tsx em componentes, criar o compontente e importar na App.tsx por exemplo
+-- estilziar o visual com o teclado especifico e campo senha *****:
+<Input
+  placeholder="E-mail"
+  keyboardType="email-address"
+  autoCapitalize='none' //manter texto em minusculo:
+/>
+<Input
+  placeholder="Senha"
+  secureTextEntry  //nao mosrar o texto da senha: 
+/>
+========================================================================================================================
+[] Button -- Exemplo de um componente
+import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base';  // importar e renomear com alias, I a tipagem
+
+type Props = IButtonProps & {  // typescript tipagem:
+    title: string;
+}
+
+export function Button({ title, ...rest }: Props) {  //tipagem:
+    return (
+        <ButtonNativeBase   
+          propriedades configuradas:
+            w="full"  // largura full mt massa                                topzera:
+            h={14}
+            bg="green.700"
+            rounded="sm"   // para ficar totalmente arrendodado usar o "full":
+            _pressed={  // estilizar quando tiver pressionado:                 topzera:
+                {
+                    bg: "green.500"
+                }
+            }
+
+            {...rest}
+        >
+            <Text color="white" fontSize="heading" fontFamily="sm">
+                {title}
+            </Text>
+        </ButtonNativeBase>
+    );
+}
+importar no SignIn por exemplo puxado do caminho '@compontents/Button'
+<Button title="Acessar" />:
+========================================================================================================================
+[]
+========================================================================================================================
+[]
+========================================================================================================================
+[]
 ========================================================================================================================
 [] Splash
 ========================================================================================================================
