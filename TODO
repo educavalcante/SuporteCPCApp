@@ -264,9 +264,19 @@ export function Button({ title, ...rest }: Props) {  //tipagem:
     );
 }
 importar no SignIn por exemplo puxado do caminho '@compontents/Button'
-<Button title="Acessar" />:
+  <Button title="Acessar" />:
+  <Button title="Criar Conta" />: 
+    *** possibilidade de usar vairante para o componente para evitar de criar mais de um componente
+criar um type na props exemplo
+    variant?: 'solid' | 'outline':
+ma passagem de parametro restringir quais são as variantes
+      exemplo:bg={variant === "outline" ? "transparent" : "green.500"}
+              borderWidth={variant === "outline" ? 1 : 0} 
+              color={variant === "outline" ? "gray.500" : "green.500"}
 ========================================================================================================================
-[]
+[] <ScrollView  BARRA DE ROLAGEM
+ENVELOPANDO toda a tag acima da Vstack exmplo no SignIn:
+// usar a propíendade  contentContainerStyle={{ flexGrow: 1 }}> 
 ========================================================================================================================
 []
 ========================================================================================================================
