@@ -278,7 +278,31 @@ ma passagem de parametro restringir quais são as variantes
 ENVELOPANDO toda a tag acima da Vstack exmplo no SignIn:
 // usar a propíendade  contentContainerStyle={{ flexGrow: 1 }}> 
 ========================================================================================================================
-[]
+[] <Navigation> stack navigator  -- https://reactnavigation.org/
+3 passos para instalaçao core, dependencias e native stack (2 estrategias de navegacao) 1 rotas logado e 2 nao-logado
+intalar usando o npm -- npm install @react-navigation/native
+                        npx expo install react-native-screens react-native-safe-area-context
+                        npm install @react-navigation/native-stack
+criar as ROTAS >.
+pasta routs/auth.Routes.tsx
+usar o createNativeStackNavigator da native-stack
+criar as rotas das Screen/
+-- @tipagem das rotas
+1 - -rotas de autenticacao:
+  **sao as rotas que não precisa estar logado, ou logar ou criar conta**
+  importar o usenavigatio from o react-navigation
+  pegar a tipagem caso a navegacao seja para telas especificas
+  criar a funcao handle que vai fazer a acao de mudar a tela
+  colcoar no onPress do botao
+  caso seja uma volta simples nao preicsa usar a tipagem apenas a navigation.GoBack()
+
+>> exmeplo na tela do signIn:
+const navigation = useNavigation<AuthNavigatorRoutesProps>(); /// exemplo com a tipagem
+
+function handleNewAccount() {
+    navigation.navigate('signUp')
+}
+
 ========================================================================================================================
 []
 ========================================================================================================================
