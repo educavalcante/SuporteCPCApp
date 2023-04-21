@@ -288,23 +288,89 @@ pasta routs/auth.Routes.tsx
 usar o createNativeStackNavigator da native-stack
 criar as rotas das Screen/
 -- @tipagem das rotas
-1 - -rotas de autenticacao:
+1 - Rotas de autenticacao: @Navigator <(as interfaces não precisa estar logado)>
   **sao as rotas que não precisa estar logado, ou logar ou criar conta**
   importar o usenavigatio from o react-navigation
   pegar a tipagem caso a navegacao seja para telas especificas
   criar a funcao handle que vai fazer a acao de mudar a tela
   colcoar no onPress do botao
   caso seja uma volta simples nao preicsa usar a tipagem apenas a navigation.GoBack()
-
->> exmeplo na tela do signIn:
+>> exemplo na tela do signIn:
 const navigation = useNavigation<AuthNavigatorRoutesProps>(); /// exemplo com a tipagem
+  function handleNewAccount() {
+      navigation.navigate('signUp')
+  }
+========================================================================================================================
+2 Bottom Navigator:  @Navigator <(continuacao com as rotas que precisa estar autenticado)>
+criar as outras interface para compor as rotas
+  @instalar-BOTTOM-dev-NAVIGATOR-TAB-navigation< https://reactnavigation.org/docs/tab-based-navigation >
+  npm install @react-navigation/bottom-tabs
+-- BOTTOM-NAVIGTOR
+componente do roda pe que contem o icones de navegacao, pode ser estilizado tirando o nome do icone pelo `
+<Navigator @screenOptions={{
+  headerShown: false,:
+  tabBarShowLabel: false,:
+}}
+aula - Alterando os ícones da Bottom Navigator:
+estilização da Bottom Tab Navigator ao implementar os ícones na aplicação. Iremos utilizar os svgs já presentes na pasta assets e aplicá-los na tabBar por meio da prop tabBarIcon.
+https://app.rocketseat.com.br/node/projeto-03-1/group/rotas-privadas/lesson/alterando-os-icones-da-bottom-navigator
+Esitizar os @icones do bottom  - IMPORTAR AS IMAGENS
+1 - Importar icones do assets se tiver
+2 - colocar no options do screenOpton -- Options --- tabBarIcon
+3 - padronizar tamanho usando o defaultTheme (se o tamnho for o mesmo pra todos colocar o size numa constante para repetir)
+exemplo 
+    options={  FAZERR TELA POR TELA -- Desta forma dentro da Screen tem que fazer em todas as telas  usando a screenOption o <Screen/
+      tabBarIcon: () => (
+        <IconeSvg />
+      )
+    }
+aula -  COR DOS ICONES SELECIONADOS   Estilizando menu ativo e inativos:  
+https://app.rocketseat.com.br/node/projeto-03-1/group/rotas-privadas/lesson/estilizando-menu-ativo-e-inativos
+Nessa aula prática você irá alterar as cores das abas ativas e inativas da tabBar por meio das props tabBarActiveTintColor etabBarInactiveTintColor.:
+cor padrao o azul para a scren selecionada e cinza as outras  -- customizar as cores da aplicacao tokens de cores do thema
+--@tabBarActiveTintColor do Navigator (screenOptions)
+-pegar a cor por desistruturacao do thema como o size
+-usar no navigator para pegar geral
+tabBarActiveTintColor: colors.green[500],
+tabBarInactiveTintColor: colors.gray[200]
 
-function handleNewAccount() {
-    navigation.navigate('signUp')
-}
+aula -  Estilizando a Bottom Navigator:
+https://app.rocketseat.com.br/node/projeto-03-1/group/rotas-privadas/lesson/estilizando-a-bottom-navigator 
+Para finalizar a estilização da tabBar, iremos aplicar um estilo dependente da plataforma (Android ou iOS) e remover a aba Exercise da tabBar.:
+@gerenciar o sistema operacional @android ou @Ios:
+☐ import { Platform } from 'react-native'
+☐ tabBarStyle: {
+  backgroundColor: colors.gray[600],
+  borderTopWidth: 0,
+  height: Platform.OS === "android" ? 'auto' : 96,
+  paddingBottom: sizes[10],
+  paddingTop: sizes[6],
+
+✔ ocultar menu sem usro no momento no bottomNavigaror: @done(23-04-20 22:56)
+  ✔ options={{ tabBarButton: () => null }} @done(23-04-20 22:56)
+  
+  ☐ ================Recap do App Routes========================
+  Nessa aula de revisão iremos repassar por todas as etapas de construção do AppRoutes, desde a definição das rotas até a estilização da tabBar.:
+  https://app.rocketseat.com.br/node/projeto-03-1/group/rotas-privadas/lesson/recap-do-app-routes
+RECAP DA NAVEGAÇÃO
+rotas de navegacao (aut e app) autenticacao e autenticadas
+tipagem especifica das screens de acordo com a rota
+utilizada a stackNavigation e a bottomNavigation
+2 rotas separadas para aplicar a autenticacao na app
+configurar themas
+estillizar menu, tela ativa, svg, gerencia de plataforma condicionalmente IOS e Android
+ocultar rota 
 
 ========================================================================================================================
-[]
+[] Remover o header 
+da Tela da navegacao <Screen/>:
+no <Screen 
+    options= {{
+      headerShown: false:  
+        //@dessa  FAZERR TELA POR TELA -- Desta forma dentro da Screen tem que fazer em todas as telas 
+    }}
+@fazer pelo Navigator usando a @screenOptions = {{ headerShown: false}}:           
+
 ========================================================================================================================
 [] Splash
 ========================================================================================================================
