@@ -306,7 +306,7 @@ criar as outras interface para compor as rotas
   @instalar-BOTTOM-dev-NAVIGATOR-TAB-navigation< https://reactnavigation.org/docs/tab-based-navigation >
   npm install @react-navigation/bottom-tabs
 -- BOTTOM-NAVIGTOR
-componente do roda pe que contem o icones de navegacao, pode ser estilizado tirando o nome do icone pelo `
+componente do roda pe que contem o icones de navegacao, pode ser estilizado tirando o nome do icone pelo 
 <Navigator @screenOptions={{
   headerShown: false,:
   tabBarShowLabel: false,:
@@ -412,6 +412,44 @@ componentizar quando se repetem (botoes, caixas de texto, cabeçalhos)
 vantaens: 
     reutilizar, produticidade, isolamento de contexto, reduz complexidade, arquivos menores, padroniza e melhor leitura
 criar componentes:
+======================================================== COMPONENTES, INTERFACES (TELAS) ===============================================
+POSICIONAMENTO HORIZONTAL E VERTICAL [] HStack / [] VStack
+Nessa aula prática vamos desenvolver o componente HomeHeader, junto com a criação desse componente vamos aprender como podemos posicionar elementos em linha (horizontal) utilizando o HStack e elementos em colunas (vertical) utilizando o VStack.
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/posicionando-na-vertical-e-horizontal
+
+[] HStack usado no componente HomeHeader para colocar um ao lado do outro exemplo:
+foto do avatar, olá, e nome do usario assim como botão sair no cabeçalho da pagina (homeHeader)
+[] Photo  componetne de foto tipando
+import { Image, IImageProps } from "native-base";
+type Props = IImageProps & {
+    size: number;
+}
+              export function UserPhoto({size, ...rest}: Props){
+                  return(
+                      <Image 
+                      w={size}
+                      h={size}
+                      rounded="full"
+                      borderWidth={2}
+                      borderColor="gray.400"
+
+                      {...rest}
+                      />
+                  )
+              }
+[] MaterialIcons importanto do @Expo/Vector-icons so que usando o Icon do native-base para passar as propriedades
+import { MaterialIcons } from '@expo/vector-icons';
+<TouchableOpacity>
+  <Icon 
+      as={MaterialIcons}
+      name="logout"
+      color="gray.200"
+      size={7}
+  />
+</TouchableOpacity>
+
+[] envolver com <TouchableOpacity> do 'react-native' para tonar clicavel
+
 
 
 [] cores
