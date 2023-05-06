@@ -94,6 +94,298 @@ plugins: [
     }
   }
 }
+
+[] cores
+#e23c44 vermelhor de exlcuir
+#31CF67 VERDE DE gravar
+
+aliceblue (`#f0f8ff`)
+antiquewhite (`#faebd7`)
+aqua (`#00ffff`)
+aquamarine (`#7fffd4`)
+azure (`#f0ffff`)
+beige (`#f5f5dc`)
+bisque (`#ffe4c4`)
+black (`#000000`)
+blanchedalmond (`#ffebcd`)
+blue (`#0000ff`)
+blueviolet (`#8a2be2`)
+brown (`#a52a2a`)
+burlywood (`#deb887`)
+cadetblue (`#5f9ea0`)
+chartreuse (`#7fff00`)
+chocolate (`#d2691e`)
+coral (`#ff7f50`)
+cornflowerblue (`#6495ed`)
+cornsilk (`#fff8dc`)
+crimson (`#dc143c`)
+cyan (`#00ffff`)
+darkblue (`#00008b`)
+darkcyan (`#008b8b`)
+darkgoldenrod (`#b8860b`)
+darkgray (`#a9a9a9`)
+darkgreen (`#006400`)
+darkgrey (`#a9a9a9`)
+darkkhaki (`#bdb76b`)
+darkmagenta (`#8b008b`)
+darkolivegreen (`#556b2f`)
+darkorange (`#ff8c00`)
+darkorchid (`#9932cc`)
+darkred (`#8b0000`)
+darksalmon (`#e9967a`)
+darkseagreen (`#8fbc8f`)
+darkslateblue (`#483d8b`)
+darkslategrey (`#2f4f4f`)
+darkturquoise (`#00ced1`)
+darkviolet (`#9400d3`)
+deeppink (`#ff1493`)
+deepskyblue (`#00bfff`)
+dimgray (`#696969`)
+dimgrey (`#696969`)
+dodgerblue (`#1e90ff`)
+firebrick (`#b22222`)
+floralwhite (`#fffaf0`)
+forestgreen (`#228b22`)
+fuchsia (`#ff00ff`)
+gainsboro (`#dcdcdc`)
+ghostwhite (`#f8f8ff`)
+gold (`#ffd700`)
+goldenrod (`#daa520`)
+gray (`#808080`)
+green (`#008000`)
+greenyellow (`#adff2f`)
+grey (`#808080`)
+honeydew (`#f0fff0`)
+hotpink (`#ff69b4`)
+indianred (`#cd5c5c`)
+indigo (`#4b0082`)
+ivory (`#fffff0`)
+khaki (`#f0e68c`)
+lavender (`#e6e6fa`)
+lavenderblush (`#fff0f5`)
+lawngreen (`#7cfc00`)
+lemonchiffon (`#fffacd`)
+lightblue (`#add8e6`)
+lightcoral (`#f08080`)
+lightcyan (`#e0ffff`)
+lightgoldenrodyellow (`#fafad2`)
+lightgray (`#d3d3d3`)
+lightgreen (`#90ee90`)
+lightgrey (`#d3d3d3`)
+lightpink (`#ffb6c1`)
+lightsalmon (`#ffa07a`)
+lightseagreen (`#20b2aa`)
+lightskyblue (`#87cefa`)
+lightslategrey (`#778899`)
+lightsteelblue (`#b0c4de`)
+lightyellow (`#ffffe0`)
+lime (`#00ff00`)
+limegreen (`#32cd32`)
+linen (`#faf0e6`)
+magenta (`#ff00ff`)
+maroon (`#800000`)
+mediumaquamarine (`#66cdaa`)
+mediumblue (`#0000cd`)
+mediumorchid (`#ba55d3`)
+mediumpurple (`#9370db`)
+mediumseagreen (`#3cb371`)
+mediumslateblue (`#7b68ee`)
+mediumspringgreen (`#00fa9a`)
+mediumturquoise (`#48d1cc`)
+mediumvioletred (`#c71585`)
+midnightblue (`#191970`)
+mintcream (`#f5fffa`)
+mistyrose (`#ffe4e1`)
+moccasin (`#ffe4b5`)
+navajowhite (`#ffdead`)
+navy (`#000080`)
+oldlace (`#fdf5e6`)
+olive (`#808000`)
+olivedrab (`#6b8e23`)
+orange (`#ffa500`)
+orangered (`#ff4500`)
+orchid (`#da70d6`)
+palegoldenrod (`#eee8aa`)
+palegreen (`#98fb98`)
+paleturquoise (`#afeeee`)
+palevioletred (`#db7093`)
+papayawhip (`#ffefd5`)
+peachpuff (`#ffdab9`)
+peru (`#cd853f`)
+pink (`#ffc0cb`)
+plum (`#dda0dd`)
+powderblue (`#b0e0e6`)
+purple (`#800080`)
+rebeccapurple (`#663399`)
+red (`#ff0000`)
+rosybrown (`#bc8f8f`)
+royalblue (`#4169e1`)
+saddlebrown (`#8b4513`)
+salmon (`#fa8072`)
+sandybrown (`#f4a460`)
+seagreen (`#2e8b57`)
+seashell (`#fff5ee`)
+sienna (`#a0522d`)
+silver (`#c0c0c0`)
+skyblue (`#87ceeb`)
+slateblue (`#6a5acd`)
+slategray (`#708090`)
+snow (`#fffafa`)
+springgreen (`#00ff7f`)
+steelblue (`#4682b4`)
+tan (`#d2b48c`)
+teal (`#008080`)
+thistle (`#d8bfd8`)
+tomato (`#ff6347`)
+turquoise (`#40e0d0`)
+violet (`#ee82ee`)
+wheat (`#f5deb3`)
+white (`#ffffff`)
+whitesmoke (`#f5f5f5`)
+yellow (`#ffff00`)
+yellowgreen (`#9acd32`)
+Thanks for letting us know!
+
+[] como executar o expo -- recomendado npx expo start
+ao inicar um projeto usar npm ou npx expo init myapp
+npx executa sem ter a necessidade de ter o expo instalado
+npx expo init my app (esclha o tipo com ts)
+npx creat-expo-app (nao pergt o tipo de projeto)
+npx expo start -- n pegar o expo local
+expo init myapp (usa o excpo da maquina) com o npx expo init myapp nao precisa ter o expo (vantajoso)
+
+npx expo install expo-font (para instalar algum tipode fonte)
+
+
+---- usar local na maquina precisa fazer a instalacao 
+pegar do site metodo mais atual exemplo npm i -g expo-cli (docs.expo.dev)
+
+[] instalar o expo local 
+npm i -g expo-cli
+[] emulador
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+[]  instar o ambiente
+https://react-native.rocketseat.dev/expo-managed/windows :
+    https://react-native.rocketseat.dev/:
+☐ 2 na pasta do projeto executar o expo start 
+expo init nome-app --npm
+** -- npm pra usar por padrao o npm
+criar com blank typescripy
+========================================================================================================================
+[] BABEL (ESTATEGIA DE MAPEAMENTO DE PASTAS MAPPING PATH) confifurar o babel e o tsconfig
+npm install --save-dev-plugin-module-resolver
+
+1 COPIAR EM babel.config:
+plugins: [
+  [
+    'module-resolver',
+    {
+      root: ['./src'],
+      alias: {
+        '@dtos': './src/dtos',
+        '@assets': './src/assets',
+        '@components': './src/components',
+        '@screens': './src/screens',
+        '@storage': './src/storage',
+        '@utils': './src/utils',
+        '@services': './src/services',
+        '@hooks': './src/hooks',
+        '@contexts': './src/contexts',
+        '@routes': './src/routes'
+      }
+    },
+  ],
+],
+2 COPIAR EM tsconfig.json:
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@dtos/*": [
+        "src/dtos/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@screens/*": [
+        "./src/screens/*"
+      ],
+      "@storage/*": [
+        "./src/storage/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@contexts/*": [
+        "./src/contexts/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ]
+    }
+  }
+}
+========================================================================================================================
+[] incluir fontes
+npx expo install expo-font @expo-google-fonts/roboto
+
+-- importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
+import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
+testar se a fonte ta carregada no inicio --- 
+export default function App() {
+  const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular }); -- carregar a fonte que vai usar
+  return (
+    <View>
+      {fontsLoaded ? <Text>Hello</Text> : <View />}  -- testa se a fonte esta carregada
+    </View>
+  );
+}
+========================================================================================================================
+
+    [] publicacao na loja 
+lojas, requisitos e dicas
+
+templates
+ANDROID:
+    - criar conta de desenvolvedor - glogle play console
+    screenshots no Android
+    gerando icones do App
+    criando o splash Screen
+    Carregamento do Splash
+    Gerando o Android App Bundle
+    Configurando Google Play Store
+    Distribuindo app para testers
+
+   
+
+========================================================================================================================
+    [] publicacao na loja 
+    lojas, requisitos e dicas
+    
+    templates
+    ANDROID:
+        - criar conta de desenvolvedor - glogle play console
+        screenshots no Android
+        gerando icones do App
+        criando o splash Screen
+        Carregamento do Splash
+        Gerando o Android App Bundle
+        Configurando Google Play Store
+        Distribuindo app para testers
+    
+    
 ========================================================================================================================
 [] incluir fontes
 npx expo install expo-font @expo-google-fonts/roboto
@@ -412,7 +704,10 @@ componentizar quando se repetem (botoes, caixas de texto, cabeçalhos)
 vantaens: 
     reutilizar, produticidade, isolamento de contexto, reduz complexidade, arquivos menores, padroniza e melhor leitura
 criar componentes:
-======================================================== COMPONENTES, INTERFACES (TELAS) ===============================================
+
+
+fINALIZANDO AS TELAS:
+  ======================================================== COMPONENTES, INTERFACES (TELAS) ===============================================
 POSICIONAMENTO HORIZONTAL E VERTICAL [] HStack / [] VStack
 Nessa aula prática vamos desenvolver o componente HomeHeader, junto com a criação desse componente vamos aprender como podemos posicionar elementos em linha (horizontal) utilizando o HStack e elementos em colunas (vertical) utilizando o VStack.
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/posicionando-na-vertical-e-horizontal
@@ -450,296 +745,63 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 [] envolver com <TouchableOpacity> do 'react-native' para tonar clicavel
 
+=================================================================================================================================
+Criando componente Group (filtragem):
+Nessa aula prática vamos iniciar a criação do componente responsável por fazer a filtragem do grupo de exercícios.
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-group
 
+1 - criar o componente Group e tipar ele com a name: string e estilizar o texto
+adciona ele na Home 
 
-[] cores
-#e23c44 vermelhor de exlcuir
-#31CF67 VERDE DE gravar
+2 - Utilizando o <Pressable/>
+Nessa aula prática vamos aprender a utilizar o componente Pressable do NativeBase. Vamos entender as diferenças entre ele e o TouchableOpacity.
+quando quer que criar uma area de toque , compórtamento parecido com o <touchableOpacity/> (A DIFERENÇA EH QUE NAO DA O OPACITY)
+Usar a tipagem IPressableProps &
+estilizar mr, w, h, bg, rounded, justfyContent, AlignItens, Overflow e ...rest
+o justifyContent e o alignItens = center deixam bem alinhados no centro
+overflow = "hidden" (para não ultrapassar o limite)
 
-aliceblue (`#f0f8ff`)
-antiquewhite (`#faebd7`)
-aqua (`#00ffff`)
-aquamarine (`#7fffd4`)
-azure (`#f0ffff`)
-beige (`#f5f5dc`)
-bisque (`#ffe4c4`)
-black (`#000000`)
-blanchedalmond (`#ffebcd`)
-blue (`#0000ff`)
-blueviolet (`#8a2be2`)
-brown (`#a52a2a`)
-burlywood (`#deb887`)
-cadetblue (`#5f9ea0`)
-chartreuse (`#7fff00`)
-chocolate (`#d2691e`)
-coral (`#ff7f50`)
-cornflowerblue (`#6495ed`)
-cornsilk (`#fff8dc`)
-crimson (`#dc143c`)
-cyan (`#00ffff`)
-darkblue (`#00008b`)
-darkcyan (`#008b8b`)
-darkgoldenrod (`#b8860b`)
-darkgray (`#a9a9a9`)
-darkgreen (`#006400`)
-darkgrey (`#a9a9a9`)
-darkkhaki (`#bdb76b`)
-darkmagenta (`#8b008b`)
-darkolivegreen (`#556b2f`)
-darkorange (`#ff8c00`)
-darkorchid (`#9932cc`)
-darkred (`#8b0000`)
-darksalmon (`#e9967a`)
-darkseagreen (`#8fbc8f`)
-darkslateblue (`#483d8b`)
-darkslategrey (`#2f4f4f`)
-darkturquoise (`#00ced1`)
-darkviolet (`#9400d3`)
-deeppink (`#ff1493`)
-deepskyblue (`#00bfff`)
-dimgray (`#696969`)
-dimgrey (`#696969`)
-dodgerblue (`#1e90ff`)
-firebrick (`#b22222`)
-floralwhite (`#fffaf0`)
-forestgreen (`#228b22`)
-fuchsia (`#ff00ff`)
-gainsboro (`#dcdcdc`)
-ghostwhite (`#f8f8ff`)
-gold (`#ffd700`)
-goldenrod (`#daa520`)
-gray (`#808080`)
-green (`#008000`)
-greenyellow (`#adff2f`)
-grey (`#808080`)
-honeydew (`#f0fff0`)
-hotpink (`#ff69b4`)
-indianred (`#cd5c5c`)
-indigo (`#4b0082`)
-ivory (`#fffff0`)
-khaki (`#f0e68c`)
-lavender (`#e6e6fa`)
-lavenderblush (`#fff0f5`)
-lawngreen (`#7cfc00`)
-lemonchiffon (`#fffacd`)
-lightblue (`#add8e6`)
-lightcoral (`#f08080`)
-lightcyan (`#e0ffff`)
-lightgoldenrodyellow (`#fafad2`)
-lightgray (`#d3d3d3`)
-lightgreen (`#90ee90`)
-lightgrey (`#d3d3d3`)
-lightpink (`#ffb6c1`)
-lightsalmon (`#ffa07a`)
-lightseagreen (`#20b2aa`)
-lightskyblue (`#87cefa`)
-lightslategrey (`#778899`)
-lightsteelblue (`#b0c4de`)
-lightyellow (`#ffffe0`)
-lime (`#00ff00`)
-limegreen (`#32cd32`)
-linen (`#faf0e6`)
-magenta (`#ff00ff`)
-maroon (`#800000`)
-mediumaquamarine (`#66cdaa`)
-mediumblue (`#0000cd`)
-mediumorchid (`#ba55d3`)
-mediumpurple (`#9370db`)
-mediumseagreen (`#3cb371`)
-mediumslateblue (`#7b68ee`)
-mediumspringgreen (`#00fa9a`)
-mediumturquoise (`#48d1cc`)
-mediumvioletred (`#c71585`)
-midnightblue (`#191970`)
-mintcream (`#f5fffa`)
-mistyrose (`#ffe4e1`)
-moccasin (`#ffe4b5`)
-navajowhite (`#ffdead`)
-navy (`#000080`)
-oldlace (`#fdf5e6`)
-olive (`#808000`)
-olivedrab (`#6b8e23`)
-orange (`#ffa500`)
-orangered (`#ff4500`)
-orchid (`#da70d6`)
-palegoldenrod (`#eee8aa`)
-palegreen (`#98fb98`)
-paleturquoise (`#afeeee`)
-palevioletred (`#db7093`)
-papayawhip (`#ffefd5`)
-peachpuff (`#ffdab9`)
-peru (`#cd853f`)
-pink (`#ffc0cb`)
-plum (`#dda0dd`)
-powderblue (`#b0e0e6`)
-purple (`#800080`)
-rebeccapurple (`#663399`)
-red (`#ff0000`)
-rosybrown (`#bc8f8f`)
-royalblue (`#4169e1`)
-saddlebrown (`#8b4513`)
-salmon (`#fa8072`)
-sandybrown (`#f4a460`)
-seagreen (`#2e8b57`)
-seashell (`#fff5ee`)
-sienna (`#a0522d`)
-silver (`#c0c0c0`)
-skyblue (`#87ceeb`)
-slateblue (`#6a5acd`)
-slategray (`#708090`)
-snow (`#fffafa`)
-springgreen (`#00ff7f`)
-steelblue (`#4682b4`)
-tan (`#d2b48c`)
-teal (`#008080`)
-thistle (`#d8bfd8`)
-tomato (`#ff6347`)
-turquoise (`#40e0d0`)
-violet (`#ee82ee`)
-wheat (`#f5deb3`)
-white (`#ffffff`)
-whitesmoke (`#f5f5f5`)
-yellow (`#ffff00`)
-yellowgreen (`#9acd32`)
-Thanks for letting us know!
+3 - Estilizando evento de Pressed (mudar visual do botão qd pressionado)  _pressed
+Nessa aula prática vamos aprender como podemos customizar o Pressable no momento em que o componente esteja ou não sendo pressionado utilizando a propriedade _pressed.
+ 
 
-[] como executar o expo -- recomendado npx expo start
-ao inicar um projeto usar npm ou npx expo init myapp
-npx executa sem ter a necessidade de ter o expo instalado
-npx expo init my app (esclha o tipo com ts)
-npx creat-expo-app (nao pergt o tipo de projeto)
-npx expo start -- n pegar o expo local
-expo init myapp (usa o excpo da maquina) com o npx expo init myapp nao precisa ter o expo (vantajoso)
+4 - Exibindo o grupo selecionado
+Nessa aula prática vamos criar uma estilização semelhante ao _pressed para podermos indicar o grupo que está selecionado no momento,
+ para isso vamos adicionar uma propriedade isActive para o componente Group e utilizar o estado da aplicação para indicar o estado 
+ selecionado.
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/exibindo-o-grupo-selecionado
+-tipar isActive  boleana
+-personalizar o botao com a propriedade isPressed={isActive} o bt ative vai recever a estilizada atribuida ao _pressed
+-estilizar tb o texto com o     {isActive ? "green.500" : "gray.200"}
+-criar um estado para selecionado
+  criar o arrey para o UseSate do react e mudar no onPress do grupo
+  onPress={() => setGrouSelected(nomedogruposelecionado)}
+-usar a propriedade
 
-npx expo install expo-font (para instalar algum tipode fonte)
+5-Listando os grupos  <FlatList/>
+Nessa aula prática vamos criar a listagem horizontal de grupos utilizando a FlatList do NativeBase, para melhorar a experiência
+ vamos criar um estado auxiliar para termos mais grupos para serem listados. ( lista fica dinamica e ja com a rolagem )
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/listando-os-grupos
+-criar o useState com o array dos grupos
+-colcoar pra rodar os itens no flatlist
+-estilizar a propriedade horizontal, caolocar o espaçamento necessario
+            <FlatList
+                data={groups}
+                keyExtractor={item => item}
+                renderItem={({item})=>(
+                    <Group 
+                    name={item}
+                    isActive={groupSelected === item} 
+                    onPress={()=> setGrouSelected(item)}
+                    />
+                )}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                _contentContainerStyle={{ px: 6 }}   
+                my={10}
+                maxH={10}
+            />
+=================================================================================================================================
 
-
----- usar local na maquina precisa fazer a instalacao 
-pegar do site metodo mais atual exemplo npm i -g expo-cli (docs.expo.dev)
-
-[] instalar o expo local 
-npm i -g expo-cli
-[] emulador
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-[]  instar o ambiente
-https://react-native.rocketseat.dev/expo-managed/windows :
-    https://react-native.rocketseat.dev/:
-☐ 2 na pasta do projeto executar o expo start 
-expo init nome-app --npm
-** -- npm pra usar por padrao o npm
-criar com blank typescripy
-========================================================================================================================
-[] BABEL (ESTATEGIA DE MAPEAMENTO DE PASTAS MAPPING PATH) confifurar o babel e o tsconfig
-npm install --save-dev-plugin-module-resolver
-
-1 COPIAR EM babel.config:
-plugins: [
-  [
-    'module-resolver',
-    {
-      root: ['./src'],
-      alias: {
-        '@dtos': './src/dtos',
-        '@assets': './src/assets',
-        '@components': './src/components',
-        '@screens': './src/screens',
-        '@storage': './src/storage',
-        '@utils': './src/utils',
-        '@services': './src/services',
-        '@hooks': './src/hooks',
-        '@contexts': './src/contexts',
-        '@routes': './src/routes'
-      }
-    },
-  ],
-],
-2 COPIAR EM tsconfig.json:
-{
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true,
-    "baseUrl": "./",
-    "paths": {
-      "@dtos/*": [
-        "src/dtos/*"
-      ],
-      "@assets/*": [
-        "./src/assets/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@screens/*": [
-        "./src/screens/*"
-      ],
-      "@storage/*": [
-        "./src/storage/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@services/*": [
-        "./src/services/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@contexts/*": [
-        "./src/contexts/*"
-      ],
-      "@routes/*": [
-        "./src/routes/*"
-      ]
-    }
-  }
-}
-========================================================================================================================
-[] incluir fontes
-npx expo install expo-font @expo-google-fonts/roboto
-
--- importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
-import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
-testar se a fonte ta carregada no inicio --- 
-export default function App() {
-  const [fontsLoaded] = useFonts({ Roboto_700Bold, Roboto_400Regular }); -- carregar a fonte que vai usar
-  return (
-    <View>
-      {fontsLoaded ? <Text>Hello</Text> : <View />}  -- testa se a fonte esta carregada
-    </View>
-  );
-}
-========================================================================================================================
-
-    [] publicacao na loja 
-lojas, requisitos e dicas
-
-templates
-ANDROID:
-    - criar conta de desenvolvedor - glogle play console
-    screenshots no Android
-    gerando icones do App
-    criando o splash Screen
-    Carregamento do Splash
-    Gerando o Android App Bundle
-    Configurando Google Play Store
-    Distribuindo app para testers
-
-   
-
-========================================================================================================================
-    [] publicacao na loja 
-    lojas, requisitos e dicas
-    
-    templates
-    ANDROID:
-        - criar conta de desenvolvedor - glogle play console
-        screenshots no Android
-        gerando icones do App
-        criando o splash Screen
-        Carregamento do Splash
-        Gerando o Android App Bundle
-        Configurando Google Play Store
-        Distribuindo app para testers
-    
-    
+Proximas aulas (componente exercicios)
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/header-da-lista-de-exercicios
