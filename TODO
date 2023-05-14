@@ -805,3 +805,14 @@ Nessa aula prática vamos criar a listagem horizontal de grupos utilizando a Fla
 
 Proximas aulas (componente exercicios)
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/header-da-lista-de-exercicios
+colocar o <Hstack> com o justyContent = "space-between" para o alinhamento horizontal com espaços separados mb={5} margin botom
+a <Vstak> com flex={1} e p paddle xy de espaço {8} px={8}
+ 1 - componente que lista os exercicios
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-exercise-card
+ ExerciseCard que será o componente responsável por exibir os detalhes do exercício no momento da listagem.
+ Vamos aprender como podemos a limitar a quantidade de linhas que serão exibidas utilizando o numberOfLines.
+
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-exercise-card
+
+
+=================================================================================================================================
