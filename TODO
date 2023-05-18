@@ -1,3 +1,93 @@
+
+[] Preparando seu Ambiente de Desenvolvimento
+https://react-native.rocketseat.dev/
+Nesse guia iremos mostrar o passo a passo para preparar o seu Ambiente React Native em sistemas Windows, Linux e macOS....
+expo-cli
+Não é mais recomendado instalar no seu sistema a Expo CLI global, você deve utilizar a Expo CLI local. Se você possui a instalação global, dê uma olhada aqui para aprender a desinstalar.
+https://react-native.rocketseat.dev/errors/expo/#desinstalando-expo-cli-global-para-usar-expo-cli-local
+Para executar os comandos com a Expo CLI local, basta adicionar o npx na frente, exemplos:
+  npx expo --version
+  npx expo -h
+
+Não se utiliza a Expo CLI local para criação de projetos. Caso queira iniciar um novo projeto, utilize o comando npx create-expo-app --template
+[] Emulador Android
+Android Studio
+Para criar o seu emulador android, é preciso ter o Android Studio instalado. Abra o programa e, dependendo se você já abriu ou não um projeto android no Android Studio antes, a interface será diferente.
+Seguindo para configuração do ambiente Android no Windows utilizando Expo Bare Workflow ou React Native CLI, iremos realizar 3 instalações principais:
+  1- Chocolatey;
+  2 - JDK 11 (LTS);
+  3 - Android Studio e dependências.
+  
+[] 1- Chocolatey;
+  Execute o comando abaixo para verificar se você possui permissões para instalar dependências com o terminal:
+    Get-ExecutionPolicy
+  Caso o retorno desse comando seja diferente de “RemoteSigned” ou "Unrestricted", execute o seguinte comando em seu terminal:
+    Set-ExecutionPolicy RemoteSigned
+  Agora, execute o seguinte comando para instalar o Chocolatey:
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+  Agora, teste se a instalação ocorreu corretamente executando o seguinte comando no seu terminal (nada irá acontecer, mas não deve retornar erros):
+    choco
+
+[] 2 - JDK 11 (LTS) - Caso esteja com o JDK instalado em sua máquina, certifique-se que sua versão seja exatamente a versão 11.
+  choco install -y openjdk11
+Agora reinicie o Powershell e execute o seguinte comando no seu terminal:
+  java -version
+  Se apresentar a versão do Java, sua instalação foi um sucesso.
+
+
+[] 3 Android Studio
+Preparativos:
+Crie uma pasta em um local desejado para instalação da SDK (Ex.: C:\Android\Sdk). É muito importante que esse caminho não possua espaços ou caracteres especiais pois irá causar erros.
+Anote esse caminho para ser utilizado posteriormente
+  Agora, no Painel de Controle do Windows, abra o item “Sistema e Segurança” ou “Sistema”, clique em “Configurações avançadas do sistema”, 
+  selecione “Variáveis de ambiente” e clique no botão “Nova variável de ambiente”, indique o nome da variável como ANDROID_HOME, 
+  adicione o caminho utilizado acima (Ex.: C:\Android\Sdk) como segundo parâmetro e clique em OK.  
+
+  Faça o mesmo processo para criar a variável JAVA_HOME. Mas primeiramente temos que obter o caminho de instalação.
+
+  Para obter o caminho, execute o comando abaixo no Powershell:
+    Get-Command java
+
+Ele deve retornar o caminho da sua instalação. Informe esse valor excluindo o final bin/java.exe no momento da criação da JAVA_HOME. 
+Por exemplo, se o comando retornar o caminho C:\Program Files\Eclipse Adoptium\jdk-11.0.17.8-hotspot\bin\java.exe, crie a variável JAVA_HOME com o valor 
+C:\Program Files\Eclipse Adoptium\jdk-11.0.17.8-hotspot.
+
+[] Na mesma janela de "Variáveis de ambiente" no Windows, clique na variável PATH e então em "Editar". 
+Haverá uma lista de caminhos e você deve adicionar esses quatro novos caminhos no fim da lista:
+  %ANDROID_HOME%\emulator
+  %ANDROID_HOME%\tools
+  %ANDROID_HOME%\tools\bin
+  %ANDROID_HOME%\platform-tools
+Se sua versão do Windows for menor que a 10 sempre coloque ponto-e-virgula ";" no final dos caminhos para eles não se juntarem
+
+Acesse a página do Android Studio e clique no botão Download Android Studio.:
+  Vá até a pasta onde o arquivo foi salvo e execute o instalador.
+  A primeira janela que deve aparecer é para escolher o que vai ser instalado. Por padrão, a opção Android Studio já vem selecionada. 
+  ✔ Selecione também a opção Android Virtual Device e clique em Next. @done(23-05-14 21:29)
+
+  https://react-native.rocketseat.dev/android/windows#preparativos-android-studio
+
+  usar o emulador:
+  https://react-native.rocketseat.dev/virtual-devices/android-emulator
+  Iniciando o Emulador
+  Com o emulador pronto, basta clicar no botão Play e aguardar o AVD iniciar. Esse processo pode demorar, principalmente na primeira execução.
+  
+  Quando o emulador terminar de carregar, abra o seu terminal e execute o comando:
+  adb devices
+
+  Se estiver tudo certo, deve aparecer uma lista com o nome do seu emulador android aberto (normalmente emulator-5554) e status device
+
+ [] Executando app no Emulador
+  Expo Bare Workflow:
+  Para esse passo é preciso que você já tenha criado o seu projeto Expo Bare Workflow. Caso não tenha criado ainda, você pode criar com o comando: 
+    npx create-expo-app --template e escolher o template Blank (Bare).
+
+    Agora, com o emulador aberto, basta abrir um terminal, acessar a pasta do seu projeto e executar o comando:
+      npm run android
+
+=========================================================================================================================================
+
 [] como executar o expo -- recomendado npx expo start
 ao inicar um projeto usar npm ou npx expo init myapp
 npx executa sem ter a necessidade de ter o expo instalado
@@ -477,7 +567,7 @@ export const THEME = extendTheme(
     }
 )
 ========================================================================================================================
-[] importar imagens  - comonente {Image} from 'native-base'
+[] <Image /> importar imagens  - comonente {Image} from 'native-base'
 import BackgroundImg from 'caminho...' (necessário criar a tipagem do png)
 adicionar a typagem com o @assets/@types/png.d.ts
  - declare module "*.png";
@@ -489,14 +579,14 @@ adicionar a typagem com o @assets/@types/png.d.ts
             position="absolute"
  [] *SVG* instalada a dependencia para poder exibir o svg
   1 expo install react-native-svg@12.1.1
-  2 a biblioteca svg TRANSFORMER   intarlar ******* npm i react-native-svg-transformer --save-dev
+  2 a biblioteca svg TRANSFORMER   instalar ******* npm i react-native-svg-transformer --save-dev
   3 criar e configurar o metro.config.js
   metro.config.js  criar um arquivco com esse nome e configurações  
   import LogoSvg from '@assets/logo.svg';
 ========================================================================================================================
-[] VStack componente de layout que coloca uma coisa emcima da outra - compmente de layout*
+[] VStack/>  componente de layout que coloca uma coisa emcima da outra - compmente de layout*
 ========================================================================================================================
-[] Heading compnente de texto para destaques de titulos
+[] Heading /> compnente de texto para destaques de titulos
 [] Input /> 
 inputs devem ser tipados para poder acessar as propriedades
 Input({ ...rest }: IInputProps) // tipagem {: 
@@ -566,11 +656,11 @@ ma passagem de parametro restringir quais são as variantes
               borderWidth={variant === "outline" ? 1 : 0} 
               color={variant === "outline" ? "gray.500" : "green.500"}
 ========================================================================================================================
-[] <ScrollView  BARRA DE ROLAGEM
+[] <ScrollView />  BARRA DE ROLAGEM
 ENVELOPANDO toda a tag acima da Vstack exmplo no SignIn:
 // usar a propíendade  contentContainerStyle={{ flexGrow: 1 }}> 
 ========================================================================================================================
-[] <Navigation> stack navigator  -- https://reactnavigation.org/
+[] <Navigation /> stack navigator  -- https://reactnavigation.org/
 3 passos para instalaçao core, dependencias e native stack (2 estrategias de navegacao) 1 rotas logado e 2 nao-logado
 intalar usando o npm -- npm install @react-navigation/native
                         npx expo install react-native-screens react-native-safe-area-context
@@ -638,7 +728,7 @@ Para finalizar a estilização da tabBar, iremos aplicar um estilo dependente da
   paddingBottom: sizes[10],
   paddingTop: sizes[6],
 
-✔ ocultar menu sem usro no momento no bottomNavigaror: @done(23-04-20 22:56)
+✔ ocultar menu sem uso no momento no bottomNavigaror: @done(23-04-20 22:56)
   ✔ options={{ tabBarButton: () => null }} @done(23-04-20 22:56)
   
   ☐ ================Recap do App Routes========================
