@@ -67,6 +67,7 @@ Acesse a página do Android Studio e clique no botão Download Android Studio.:
   ✔ Selecione também a opção Android Virtual Device e clique em Next. @done(23-05-14 21:29)
 
   https://react-native.rocketseat.dev/android/windows#preparativos-android-studio
+  aumentar espaço em disco para 8000
 
   usar o emulador:
   https://react-native.rocketseat.dev/virtual-devices/android-emulator
@@ -86,6 +87,11 @@ Acesse a página do Android Studio e clique no botão Download Android Studio.:
     Agora, com o emulador aberto, basta abrir um terminal, acessar a pasta do seu projeto e executar o comando:
       npm run android
 
+
+
+  [] indev 
+      npm run android  (emulador android)
+      npx expo start (rodar no device externo expo-go)
 =========================================================================================================================================
 
 [] como executar o expo -- recomendado npx expo start
@@ -97,8 +103,6 @@ npx expo start -- n pegar o expo local
 expo init myapp (usa o excpo da maquina) com o npx expo init myapp nao precisa ter o expo (vantajoso)
 
 npx expo install expo-font (para instalar algum tipode fonte)
-
-
 ---- usar local na maquina precisa fazer a instalacao 
 pegar do site metodo mais atual exemplo npm i -g expo-cli (docs.expo.dev)
 
@@ -184,6 +188,19 @@ plugins: [
     }
   }
 }
+========================================================================================================================================
+[] Icons
+https://oblador.github.io/react-native-vector-icons/
+import { MaterialIcons } from '@expo/vector-icons';
+<HStack>
+                <Icon 
+                    as={MaterialIcons}
+                    name="check"
+                    color="gray.200"
+                    size={7}
+                />
+</HStack>
+
 
 [] cores
 #e23c44 vermelhor de exlcuir
