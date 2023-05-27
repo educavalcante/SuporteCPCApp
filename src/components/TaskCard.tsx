@@ -19,11 +19,11 @@ export function  TaskCard({...rest}: Props ){
                     m={4}                    
                 />
                 <VStack flex={1}>
-                    <Heading fontSize="lg" color="white">
+                    <Heading fontSize="md" color="white">
                         Firebird 4.0 (HO)
                     </Heading>
 
-                    <Text fontSize="xs" color="gray.200" numberOfLines={2}>
+                    <Text fontSize="ss" color="gray.200" numberOfLines={2}>
                         Elaborar projeto de migração e proposta comercial
                     </Text>
                 </VStack>

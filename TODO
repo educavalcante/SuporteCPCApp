@@ -382,7 +382,7 @@ criar com blank typescripy
 ========================================================================================================================
 [] BABEL (ESTATEGIA DE MAPEAMENTO DE PASTAS MAPPING PATH) confifurar o babel e o tsconfig
 npm install --save-dev-plugin-module-resolver
-
+[] Mapeamento das pastas
 1 COPIAR EM babel.config:
 plugins: [
   [
@@ -923,3 +923,20 @@ a <Vstak> com flex={1} e p paddle xy de espaço {8} px={8}
 
 
 =================================================================================================================================
+[] Historico (exibir uma listagem com a <SectionList/>)
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/utilizando-section-list
+Nessa aula vamos conhecer um novo componente que vai nos ajudar a agrupar uma listagem de dados na nossa aplicação.
+
+29.05.2023
+  CLIENTE
+  titulo do chamado
+
+  CLIENTE
+  titulo do chamado
+  
+29.05.2023
+  CLIENTE
+  titulo do chamado
+  
+  CLIENTE
+  titulo do chamado
