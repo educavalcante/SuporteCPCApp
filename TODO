@@ -497,7 +497,7 @@ ANDROID:
 [] incluir fontes
 npx expo install expo-font @expo-google-fonts/roboto
 
--- importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
+-  importar no app.tsx import { useFonts, roboto...dizer qual } from '@expo-google-fonts/roboto';
 import { useFonts, Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
 testar se a fonte ta carregada no inicio --- 
 export default function App() {
@@ -521,7 +521,7 @@ translucent  (mostrar no topo)
 />
 ========================================================================================================================
 [] native-base componente library - docs.nativebase.io
-bibilioteca de compontnes - produtividade
+- bibilioteca de compontnes - produtividade
 docs.nativebase.ioimport { Spinner } from 'native-base'
 Loadiing:
 import { Spinner, Center } from 'native-base'   -- center e spinner
@@ -532,16 +532,16 @@ export function Loading() {
         </Center>
     );
 }
-instar em projeto existente ou em projeto novo
-1 npm install native-base
-2 expo install react-native-svg@12.1.1
-3 expo install react-native-safe-area-context@3.3.2
+- instalar em projeto existente ou em projeto novo
+- 1 npm install native-base
+- 2 expo install react-native-svg@12.1.1
+- 3 expo install react-native-safe-area-context@3.3.2
 
 testar se o native-base esta funcionado importa o NativeBaseProvider (anvoçver tpda a aplicacao)
 ========================================================================================================================
 [] THEME customizar tema do native-base -- import { extendTheme }
 src/theme/index.ts
-extender o thema padrao criando uma nova tematica com as cores do projeto
+- extender o thema padrao criando uma nova tematica com as cores do projeto
 precisa importar o thema craido no App.tsx 
 ...............................................index.ts
 import { extendTheme } from 'native-base'
@@ -751,7 +751,8 @@ Para finalizar a estilização da tabBar, iremos aplicar um estilo dependente da
   ☐ ================Recap do App Routes========================
   Nessa aula de revisão iremos repassar por todas as etapas de construção do AppRoutes, desde a definição das rotas até a estilização da tabBar.:
   https://app.rocketseat.com.br/node/projeto-03-1/group/rotas-privadas/lesson/recap-do-app-routes
-RECAP DA NAVEGAÇÃO
+ 
+  ✔ RECAP DA NAVEGAÇÃO @done(23-05-27 22:36)
 rotas de navegacao (aut e app) autenticacao e autenticadas
 tipagem especifica das screens de acordo com a rota
 utilizada a stackNavigation e a bottomNavigation
@@ -780,7 +781,7 @@ npm install react-native-linear-gradient
 [] Tela de login
 Home:
 export e export defautl
-exportacao sem o defalut exportacao nomeada usar entre cheves com o default n precisa das chaves
+- exportacao sem o defalut exportacao nomeada usar entre cheves com o default n precisa das chaves
 o export sem o default tem que apontar entre chaves  *** preferir usar sem o defautl para evityar inconsistencias
 na default vc n escolhe o que quer exportar por isso n precisa das chaves (pode apelidar / da margem a inconsistencias)
 *** preferir usar sem o defautl para evityar inconsistencias
@@ -820,7 +821,7 @@ Nessa aula prática vamos desenvolver o componente HomeHeader, junto com a cria�
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/posicionando-na-vertical-e-horizontal
 
 [] HStack usado no componente HomeHeader para colocar um ao lado do outro exemplo:
-foto do avatar, olá, e nome do usario assim como botão sair no cabeçalho da pagina (homeHeader)
+- - foto do avatar, olá, e nome do usario assim como botão sair no cabeçalho da pagina (homeHeader)
 [] Photo  componetne de foto tipando
 import { Image, IImageProps } from "native-base";
 type Props = IImageProps & {
@@ -854,44 +855,45 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 =================================================================================================================================
 Criando componente Group (filtragem):
-Nessa aula prática vamos iniciar a criação do componente responsável por fazer a filtragem do grupo de exercícios.
+  - Nessa aula prática vamos iniciar a criação do componente responsável por fazer a filtragem do grupo de exercícios.
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-group
 
-1 - criar o componente Group e tipar ele com a name: string e estilizar o texto
+- 1 - criar o componente Group e tipar ele com a name: string e estilizar o texto
 adciona ele na Home 
 
-2 - Utilizando o <Pressable/>
-Nessa aula prática vamos aprender a utilizar o componente Pressable do NativeBase. Vamos entender as diferenças entre ele e o TouchableOpacity.
+- 2 - Utilizando o <Pressable/>
+- Nessa aula prática vamos aprender a utilizar o componente Pressable do NativeBase. Vamos entender as diferenças entre ele e o TouchableOpacity.
 quando quer que criar uma area de toque , compórtamento parecido com o <touchableOpacity/> (A DIFERENÇA EH QUE NAO DA O OPACITY)
 Usar a tipagem IPressableProps &
 estilizar mr, w, h, bg, rounded, justfyContent, AlignItens, Overflow e ...rest
 o justifyContent e o alignItens = center deixam bem alinhados no centro
 overflow = "hidden" (para não ultrapassar o limite)
 
-3 - Estilizando evento de Pressed (mudar visual do botão qd pressionado)  _pressed
-Nessa aula prática vamos aprender como podemos customizar o Pressable no momento em que o componente esteja ou não sendo pressionado utilizando a propriedade _pressed.
+- 3 - Estilizando evento de Pressed (mudar visual do botão qd pressionado)  _pressed
+- Nessa aula prática vamos aprender como podemos customizar o Pressable no momento em que o componente esteja ou não sendo pressionado utilizando a propriedade _pressed.
  
 
-4 - Exibindo o grupo selecionado
-Nessa aula prática vamos criar uma estilização semelhante ao _pressed para podermos indicar o grupo que está selecionado no momento,
+- 4 - Exibindo o grupo selecionado
+- Nessa aula prática vamos criar uma estilização semelhante ao _pressed para podermos indicar o grupo que está selecionado no momento,
  para isso vamos adicionar uma propriedade isActive para o componente Group e utilizar o estado da aplicação para indicar o estado 
  selecionado.
  https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/exibindo-o-grupo-selecionado
--tipar isActive  boleana
--personalizar o botao com a propriedade isPressed={isActive} o bt ative vai recever a estilizada atribuida ao _pressed
--estilizar tb o texto com o     {isActive ? "green.500" : "gray.200"}
--criar um estado para selecionado
+- tipar isActive  boleana
+- personalizar o botao com a propriedade isPressed={isActive} o bt ative vai recever a estilizada atribuida ao _pressed
+- estilizar tb o texto com o     {isActive ? "green.500" : "gray.200"}
+- criar um estado para selecionado
   criar o arrey para o UseSate do react e mudar no onPress do grupo
   onPress={() => setGrouSelected(nomedogruposelecionado)}
--usar a propriedade
+- usar a propriedade
 
-5-Listando os grupos  <FlatList/>
-Nessa aula prática vamos criar a listagem horizontal de grupos utilizando a FlatList do NativeBase, para melhorar a experiência
+[] FlatList
+- 5-Listando os grupos  <FlatList/>
+- Nessa aula prática vamos criar a listagem horizontal de grupos utilizando a FlatList do NativeBase, para melhorar a experiência
  vamos criar um estado auxiliar para termos mais grupos para serem listados. ( lista fica dinamica e ja com a rolagem )
  https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/listando-os-grupos
--criar o useState com o array dos grupos
--colcoar pra rodar os itens no flatlist
--estilizar a propriedade horizontal, caolocar o espaçamento necessario
+- criar o useState com o array dos grupos
+- colcoar pra rodar os itens no flatlist
+- estilizar a propriedade horizontal, caolocar o espaçamento necessario
             <FlatList
                 data={groups}
                 keyExtractor={item => item}
@@ -910,14 +912,14 @@ Nessa aula prática vamos criar a listagem horizontal de grupos utilizando a Fla
             />
 =================================================================================================================================
 
-Proximas aulas (componente exercicios)
+- Proximas aulas (componente exercicios)
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/header-da-lista-de-exercicios
 colocar o <Hstack> com o justyContent = "space-between" para o alinhamento horizontal com espaços separados mb={5} margin botom
 a <Vstak> com flex={1} e p paddle xy de espaço {8} px={8}
- 1 - componente que lista os exercicios
+ - 1 - componente que lista os exercicios
  https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-exercise-card
  ExerciseCard que será o componente responsável por exibir os detalhes do exercício no momento da listagem.
- Vamos aprender como podemos a limitar a quantidade de linhas que serão exibidas utilizando o numberOfLines.
+ - Vamos aprender como podemos a limitar a quantidade de linhas que serão exibidas utilizando o numberOfLines.
 
  https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/criando-componente-exercise-card
 
@@ -925,18 +927,129 @@ a <Vstak> com flex={1} e p paddle xy de espaço {8} px={8}
 =================================================================================================================================
 [] Historico (exibir uma listagem com a <SectionList/>)
 https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/utilizando-section-list
-Nessa aula vamos conhecer um novo componente que vai nos ajudar a agrupar uma listagem de dados na nossa aplicação.
-
+- Nessa aula vamos conhecer um novo componente que vai nos ajudar a agrupar uma listagem de dados na nossa aplicação.
+- cria um componente com um card com os dados, depois na pagina onde vai renderizar usa uma section para organizar o array
+- o arary obedece ao formato title e data
 29.05.2023
-  CLIENTE
-  titulo do chamado
+  CLIENTE   - title do array
+  titulo do chamado -- data do array
 
   CLIENTE
   titulo do chamado
+- exemplo do array
+  const [tarefas, setTarefas] = useState([
+    {
+        title: "25.5.23",
+        data: ["Manobra Base dados", "Tela Uti"]
+    },
+    {
+        title: "26.5.23",
+        data: ["Implantasr Rastreabilidade"]
+    },
+])
   
-29.05.2023
-  CLIENTE
-  titulo do chamado
-  
-  CLIENTE
-  titulo do chamado
+- exemplo da <SectionList /> na screen/myTasks
+      <SectionList 
+                sections={tarefas}
+                keyExtractor={item => item}
+                renderItem={({item}) => (
+                    <HistoricoCard />
+                )}
+                renderSectionHeader={({section}) => (
+                    <Heading color="gray.200" fontSize="sm" mt={10} mb={3}>
+                        {section.title}
+                    </Heading>
+                )}
+                    px={6}
+            />
+
+      [] Mensagem de lista vazia
+  https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/mensagem-de-lista-vazia
+ -  Nessa aula prática vamos aprender como podemos adicionar um componente personalizado para exibir quando uma listagem está vazia utilizando a propriedade ListEmptyComponent.
+ - Vamos aprender como podemos dar uma quebra de linha nos nossos textos utilizando o {'\n'}.
+
+ 
+ ✔ overview / recap @done(23-05-27 21:33)
+ componente screnHeader maleavel
+ card para ter as informações puxdas do backend com as devidas tipagens
+ nova forma de listar renderizando com a sectionList pega o conteudo do backend 
+--------------------------------------------------------------------------------------
+[] perfil 
+- componente UserPhoto
+ - --passar o source={{uri: 'http..'}} | alt="xxx" size={33}
+ centralziar o <Center /> fazer o margin top mt={} e o pading xy py={}
+
+=======================================================================================
+[] componente de feeedback para o usaurio
+- <Skeleton />
+- conceito é cirar  mesma forma geometrica com as mesmas dimensões para ficar "por traz do carregamento" 
+- podendo manipúlar o a cor inicial e final para fazer o efeito
+- criar um state boleano para o bloco, exemplo o carregamento da foto do perfil
+
+                    <Center mt={6} px={10}>
+                    {
+                        photoIsLoading ?
+                        <Skeleton    --------------- componente de feedback
+                            w={PHOTO_SIZE}
+                            h={PHOTO_SIZE}
+                            rounded="full"
+                            startColor="gray.500"
+                            endColor="gray.400"
+                        />
+                        :
+                        <UserPhoto 
+                            source={{ uri : 'https://lh3.googleusercontent.com/ogw/AOLn63FyVSI51xvzPIeFoMHMpkazEQQEZ5lBf1j1CJnN7w=s32-c-mo' }}
+                            alt="foto do perfil"
+                            size={PHOTO_SIZE}               
+                        />
+                    }                        
+                    </Center>
+=======================================================================================
+-  Botão -                       <TouchableOpacity />
+[] colocar um BOTÃO na tela de perfil para altear a foto e abrir a galeria de fotos do celular
+ - componente <TouchableOpacity /> do "react-native"
+ - colocar um texto dentro estilizado com a cor, fontweight = bold, mt={2} mb={8}
+
+ <TouchableOpacity>
+ <Text color="green.500" fontWeight="bold" fontSize="sm" mt={2} mb={8}>
+     Alterar Foto
+ </Text>
+</TouchableOpacity>   
+
+=======================================================================================
+ -  Input  -                      <NativeBaseInput />
+[] o input é um @componemnts/inpt já estilizado no projeto
+import { Input as NativeBaseInput, IInputProps } from 'native-base'
+
+export function Input({ ...rest }: IInputProps) {
+    return (
+        <NativeBaseInput
+            bg="gray.100"
+            h={14}
+            px={4}
+            borderWidth={3}
+            borderRadius={10}
+            fontSize="xs"
+            color="white"
+            fontFamily="body"
+            mb={2}
+            placeholderTextColor="gray.300"
+            _focus={{
+                bg: "gray.700",
+                borderWidth: 1,
+                borderColor: "grenn.500"
+            }}
+
+            {...rest}
+        />
+    );
+}
+
+  <Input 
+                              placeholder='eduardo@cpcbrasil.com'
+                              bg="gray.500"
+                              borderWidth={0}
+                              isDisabled
+                          />  
+
+                      

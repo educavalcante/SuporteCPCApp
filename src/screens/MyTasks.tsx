@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Heading, SectionList, VStack } from 'native-base';
+import { Heading, SectionList, Text, VStack } from 'native-base';
 
 import { ScreensHeader } from '@components/ScreensHeader';
 import { HistoricoCard } from '@components/HistoricoCard';
@@ -31,8 +31,18 @@ export function MyTasks() {
                         {section.title}
                     </Heading>
                 )}
-                    px={6}
+                px={6}
+                contentContainerStyle={tarefas.length === 0 && { flex: 1, justifyContent:'center'}}
+                ListEmptyComponent={() => (
+                    <Text>
+                        Não há tarefas registrados ainda. {'\n'}
+                        Vamos analisar as demandas...
+                    </Text>
+                )}
+                showsVerticalScrollIndicator={false}
             />
+
+            
         </VStack>
     )
 }
