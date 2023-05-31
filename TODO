@@ -980,7 +980,8 @@ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/
  centralziar o <Center /> fazer o margin top mt={} e o pading xy py={}
 
 =======================================================================================
-[] componente de feeedback para o usaurio
+[] componente de feeedback para o usaurio   <Skeleton />
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/efeito-skeleton
 - <Skeleton />
 - conceito é cirar  mesma forma geometrica com as mesmas dimensões para ficar "por traz do carregamento" 
 - podendo manipúlar o a cor inicial e final para fazer o efeito
@@ -1018,6 +1019,7 @@ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/
 
 =======================================================================================
  -  Input  -                      <NativeBaseInput />
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/inputs-de-nome-e-e-mails
 [] o input é um @componemnts/inpt já estilizado no projeto
 import { Input as NativeBaseInput, IInputProps } from 'native-base'
 
@@ -1052,4 +1054,44 @@ export function Input({ ...rest }: IInputProps) {
                               isDisabled
                           />  
 
-                      
+ - RECAP DA PROFILE
+ - <screenHeader />cabeçaho aproveitado do componente <screenHeader />
+ - <Skeleton /> adcionado um skeleton para dar um feedback de carregamento com useState() se foto esta carregando mostra o esqueleto senao carrega a foto
+ - <TouchableOpacity />  botão pra alterar a senha
+ - <Scrolview /> barra de rolagem para os inputs com uma propriedade contentContainerStyle = {{ paddingBotton: 56}}
+ - <input /> @compontent (propriedades de input utilziadas)  
+     desabilitado para digitacao   - isDisabled
+     mostrando o ** da senha       - secureTextEntry
+ - <Vstack /> um abaixo do outro
+ acessar a pagina da documentação do native-base, [docs.nativebase.io/customize-theme], 
+ para pegar os tamanhos padrões de design [cores, tamanhos, tipography, shadows etc]
+
+==========================================================================================================================================================================
+[] tela que exibe os detalhes de uma tarefa  <função de Navegação> usando a tipagem das rotas/telas
+https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/navegando-para-tela-de-exercicio
+- função handle (usada para quando é disparada pela interação de um usuario) exemplo vai clicar e acessar os detalhes
+- a função vai no onPress={} do card que vai ser clicado no caso chamado ou tarefa para navegar ate o detalhe
+- importar o useNavigarion do react-natigation/native
+- //!**** usar a tipagem criada para as opções de rotas para que elas fiquem disponivel para .navigation <appNavigatorProps>()
+  - essa tipagem esta dentro de routes/app.routes.tsx
+
+const navigation = useNavigation<appNavigatorProps>();
+
+function handleOpenDetalheChamados(){ 
+  navigation.navigate('chamadodetalhe')
+}
+
+<taskChamado 
+  onPress={handleOpenDetalheChamado}
+/>
+- tipagem <AppTabNavigatorRoutesProps> exportada (dentro de routes/app.routes.tsx)
+
+type AppRoutes = {
+    home: undefined;
+    jobs: undefined;
+    mytasks: undefined;
+    ratday: undefined;
+    profile: undefined;
+}
+export type AppTabNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>; //exportar a tipagem AppRoutes
+==========================================================================================================================================================================

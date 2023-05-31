@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import {  FlatList, Text, VStack, HStack, Heading } from 'native-base';
+
+import { AppTabNavigatorRoutesProps } from '@routes/app.routes'; //! lembrando tipagem das rotas importadas para usar no navigation
 
 import { Group } from '@components/Group';
 import { HomeHeader } from '@components/HomeHeader';
@@ -10,6 +13,11 @@ export function Home() {
     const [groupSelected, setGroupSelected] = useState('tarefas');
     const [tasks, setTasks] = useState(["Firebird 4.0", "Páginas Telemedicina", "Questionário WEB", "Rastreabilidade", "Onocologia"]) 
     const [taskSelected, setTaskSelected] = useState('Firebird 4.0');
+
+    const navigation = useNavigation<AppTabNavigatorRoutesProps>();
+    function handleOpenDetalheChamados(){
+        navigation.navigate('mytasks')
+    }
 
     return (
         <VStack flex={1}>
@@ -44,7 +52,9 @@ export function Home() {
                     data={tasks}
                     keyExtractor={item => item}
                     renderItem={({item}) => (
-                        <TaskCard />
+                        <TaskCard 
+                            onPress={handleOpenDetalheChamados}
+                        />
                     )}
                     showsVerticalScrollIndicator={false}
                     _contentContainerStyle={{ paddingBottom: 20 }}

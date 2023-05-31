@@ -15,7 +15,7 @@ export function Profile() {
     return (
         <VStack flex={1}>
             <ScreensHeader title='Perfil'/>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{paddingBottom: 36}}>
                     <Center mt={6} px={10}>
                     {
                         photoIsLoading ?
@@ -53,11 +53,11 @@ export function Profile() {
                         />          
                     </Center>        
 
-                    <VStack>
-                        <Heading color="gray.200" fontSize="sm" px={10} mt={10} mb={1}>
+                    
+                        <Heading color="gray.200" fontSize="sm" px={10} mt={8} mb={1} alignSelf="flex-start">
                             Alterar Senha
                         </Heading>
-                        <Center mt={4} px={10}>
+                        <Center mt={1} px={10}>
                             <Input 
                                 placeholder='Senha Antiga'
                                 bg="gray.500"
@@ -91,7 +91,7 @@ export function Profile() {
 
                         </Center>
 
-                    </VStack>
+                   
             </ScrollView>
         </VStack>
     )
