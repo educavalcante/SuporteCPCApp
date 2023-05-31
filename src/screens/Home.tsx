@@ -16,7 +16,7 @@ export function Home() {
 
     const navigation = useNavigation<AppTabNavigatorRoutesProps>();
     function handleOpenDetalheChamados(){
-        navigation.navigate('mytasks')
+        navigation.navigate('chamadosdetail')
     }
 
     return (

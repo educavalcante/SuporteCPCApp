@@ -11,6 +11,7 @@ import { Jobs } from '@screens/Jobs';
 import { MyTasks } from '@screens/MyTasks';
 import { RatDay } from '@screens/RatDay';
 import { Profile } from '@screens/Profile';
+import { ChamadosDetail } from '@screens/ChamadosDetail';
 
 type AppRoutes = {
     home: undefined;
@@ -18,6 +19,7 @@ type AppRoutes = {
     mytasks: undefined;
     ratday: undefined;
     profile: undefined;
+    chamadosdetail: undefined;
 }
 export type AppTabNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>; //exportar a tipagem AppRoutes
 
@@ -76,6 +78,11 @@ export function AppRoutes() {
             <Screen
                 name='jobs'
                 component={Jobs}
+                options={{ tabBarButton: () => null }}
+            />
+            <Screen
+                name='chamadosdetail'
+                component={ChamadosDetail}
                 options={{ tabBarButton: () => null }}
             />
 

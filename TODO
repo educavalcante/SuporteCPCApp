@@ -1095,3 +1095,10 @@ type AppRoutes = {
 }
 export type AppTabNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>; //exportar a tipagem AppRoutes
 ==========================================================================================================================================================================
+
+[] tela de chamados detalhe com um cabeçalho, seta pra voltar e dos detalhes do chamado
+- botao pra voltar usando o navigatios.GoBack()
+- arrumação com a <HSatck e VStack> alighItem="center" justifyContent="space-between"
+- no <Heading ou Text> pode usar um flexShrink={1} para fazer aquebra do texto
+
+

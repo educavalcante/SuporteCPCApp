@@ -6,10 +6,10 @@ export function ChamadosCard(){
             alignItems="center" justifyContent="space-between">
                 <VStack mr={5}>
                     <Heading color="white" fontSize="sm" textTransform="capitalize">
-                        UPA
+                        Eduardo
                     </Heading>
                     <Text color="gray.100" numberOfLines={1} fontSize="sm">
-                        Manobra base de dados
+                        Agendada visita técnica medico coordenador anestesia
                     </Text>
                 </VStack>
                 <Text color="gray.300" fontSize="sm">
