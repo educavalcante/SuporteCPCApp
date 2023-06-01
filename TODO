@@ -1101,4 +1101,25 @@ export type AppTabNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>; //e
 - arrumação com a <HSatck e VStack> alighItem="center" justifyContent="space-between"
 - no <Heading ou Text> pode usar um flexShrink={1} para fazer aquebra do texto
 
+- imagem no cento
+[] <Image /> **resizeMdde="cover" para não espalhar
+<VStack px={8} mt={6}>
+<Image 
+    w="full"
+    h={80}
+    source={{ uri: 'https://conteudo.imguol.com.br/c/entretenimento/0c/2019/12/03/remada-unilateral-com-halteres-1575402100538_v2_600x600.jpg' }}
+    alt="imagem do exercicio"
+    mb={3}
+    resizeMode='cover'  -- importante usar 'cover', pois caso a imagem seja pequena obedecer o tamh w= e h= definido 
+    rounded="lg"
+/>
+</VStack>
 
+[] <Box> equivale a uma view (fazendo uma caixinha)
+box é interessante no quesito de estilização
+no quesito de alinhamento usar o px o mb mt, o alignItens="center" justifyContent="space-around"
+- Ajustes finais nas interfaces
+ https://app.rocketseat.com.br/node/projeto-03-1/group/finalizando-as-interfaces/lesson/ajustes-finais-nas-interfaces
+1 - resizeMode='cover'
+
+=========================================================================================================================================================================

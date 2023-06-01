@@ -19,7 +19,7 @@ export function  TaskCard({...rest}: Props ){
                     m={4}                    
                 />
                 <VStack flex={1}>
-                    <Heading fontSize="md" color="white">
+                    <Heading fontSize="md" color="white" numberOfLines={1}>
                         Firebird 4.0 (HO)
                     </Heading>
 

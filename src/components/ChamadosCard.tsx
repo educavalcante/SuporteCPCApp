@@ -5,7 +5,7 @@ export function ChamadosCard(){
         <HStack w="full" px={5} py={4} mb={3} bg="gray.600" rounded="md"
             alignItems="center" justifyContent="space-between">
                 <VStack mr={5}>
-                    <Heading color="white" fontSize="sm" textTransform="capitalize">
+                    <Heading color="white" fontSize="sm" textTransform="capitalize" numberOfLines={1}>
                         Eduardo
                     </Heading>
                     <Text color="gray.100" numberOfLines={1} fontSize="sm">
